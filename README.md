@@ -19,6 +19,7 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 - CodeBook.md: describes the variables, the data, and transformations performed to clean up the data.
 - README.md
+- README.html
 - run_analysis.R: Description of this script below.
 
 **This script does the following:**
