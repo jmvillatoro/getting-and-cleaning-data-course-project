@@ -49,7 +49,23 @@ The script run_analisys.R process the raw data and create a tidy data set.
 
 ### Merging ###
 
-Test and training data (X_train.txt, X_test.txt), subject ids (subject_train.txt, subject_test.txt) and activity ids (y_train.txt, y_test.txt) are merged to obtain a single data set. Variables are labelled with the names assigned by original collectors (features.txt).
-Extract mean and standard deviation variables.
+Test and training data (X_train.txt, X_test.txt), subject ids (subject_train.txt, subject_test.txt) and activity ids (y_train.txt, y_test.txt) are merged to obtain a single data set. Variables are labelled with new column names.
+A new vector is created for separate the standard deviation and mean. Then a subsetting is done and the merged data only contain measures with sd and mean.
 
-From the merged data set is extracted and intermediate data set with only the values of estimated mean (variables with labels that contain "mean") and standard deviation (variables with labels that contain "std").
+###Descriptive activity names###
+
+A new column ActivityType is added to data set with the activity description. 
+
+Labels were changed to obtain more descriptive ones as follow:
+
+- All the columns with "t" indicating time are labeled with "Time..." properly.
+- All the columns with "f" indicating frequency are labeled with "Freq..." properly.
+- "Acc" is Accel.
+- "Mag" is Magnitude
+- "mean" is Mean
+- "std" is StDev
+
+###Tidy Data###
+From the data set with descriptive variable names, a new and independent tidy data set with the average of each variable for each activity and each subject is created.
+
+

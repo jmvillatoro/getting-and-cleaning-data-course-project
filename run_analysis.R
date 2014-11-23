@@ -75,7 +75,7 @@ trainingTestNAT <- trainingTest[,names(trainingTest) != 'activityType'];
 # Summarize trainingTestNAT table including just the mean of each variable for each activity and each subject
 tidyData <- aggregate(trainingTestNAT[,names(trainingTestNAT) != c('activityId','subjectId')],by=list(activityId=trainingTestNAT$activityId,subjectId = trainingTestNAT$subjectId),mean);
 
-# Merge the tidyData with activityType to include descriptive actvity names
+# Merge the tidyData with activityType to include descriptive activity names
 tidyData <- merge(tidyData,activityType,by='activityId',all.x=TRUE);
 
 # Export
